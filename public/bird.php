@@ -22,19 +22,9 @@
       </tr>
 
 
-<?php
-$parser = new ParseCSV(PRIVATE_PATH . '/wnc-birds.csv');
-$bird_array = $parser->parse();
-// echo '<pre>';
-// print_r($bird_array);
-// echo '</pre>';
-//exit();
-?>
-
-
-
-      <?php foreach($bird_array as $args) { ?>
-     <?php  $bird = new Bird($args);   ?>
+    <?php $stmt = $database->query("SELECT * FROM birds"); ?>
+    <?php while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) { ?>
+     <?php  $bird = new Bird($row);   ?>
       <tr>
         <td><?php echo $bird->common_name; ?></td>
         <td><?= $bird->habitat; ?></td>

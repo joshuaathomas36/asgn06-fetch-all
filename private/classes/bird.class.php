@@ -17,14 +17,14 @@
         4 => "Extreme concern"
     ];
 
-    public function __construct($args=[]) {
-        $this->common_name = $args['common_name'] ?? '';
-        $this->habitat = $args['habitat'] ?? '';
-        $this->food = $args['food'] ?? '';
-        $this->nest_palcement = $args['nest_palcement'] ?? '';
-        $this->behavior = $args['behavior'] ?? '';
-        $this->backyard_tips = $args['backyard_tips'] ?? '';
-        $this->conservation_id = $args['conservation_id'] ?? '';
+    public function __construct($row=[]) {
+        $this->common_name = $row['common_name'] ?? '';
+        $this->habitat = $row['habitat'] ?? '';
+        $this->food = $row['food'] ?? '';
+        $this->nest_palcement = $row['nest_palcement'] ?? '';
+        $this->behavior = $row['behavior'] ?? '';
+        $this->backyard_tips = $row['backyard_tips'] ?? '';
+        $this->conservation_id = $row['conservation_id'] ?? '';
 
     }
 
