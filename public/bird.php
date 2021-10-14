@@ -36,16 +36,6 @@
       </tr>
 <?php } ?>
     </table>
-
-    <?php
-
-      // This code is from the PDO tutorial from asgn05
-
-      $stmt = $database->query("SELECT * FROM birds");
-      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo 'Name: ' . $row['common_name'] . '<br>';
-      }
-    ?>
   </div>
 
 </div>
